@@ -1,17 +1,17 @@
 def solution(M, F):
-	import math
-	M, F = float(M), float(F)
-	if M % 2 == 0 and F % 2 == 0:
-		return "impossible"
-	if M == 1 and F == 1:
-		return 0
-
-	m, f = M, F
-	while True:
-		mx, mi = max(M, F), min(M, F)
-		gen = math.floor(mx / mi)
-		print gen
-		break
+	M, F = long(M), long(F)
+	generation = 0
+	while (M != 1 or F != 1) :
+		if F <= 0 or M <= 0:
+			generation = "impossible"
+			break
+		if M != 0 and F == 1:
+			generation += (M - 1)
+			break
+		else:
+			generation += long(M / F)
+			M, F = F, M % F		
+	return str(generation)
 
 if __name__ == "__main__":
 	cases = [
@@ -19,7 +19,7 @@ if __name__ == "__main__":
 		('4', '7')
 	]
 	answers = [
-		'1', '4'
+		1, 4
 	]
 	for test, answer in zip(cases, answers):
-		print(solution(test[0], test[1]) == answer)
+		print(solution(test[0], test[1]))
