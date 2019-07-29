@@ -1,0 +1,28 @@
+For example, given strings A and B such that:
+
+
+ A = "abcd,aabc,bd"
+
+
+ B = "aaa,aa"
+
+
+the function should return [3, 2], because:
+
+
+All the strings in the array are strictly smaller than "aaa" on the basis of the given comparison criteria;
+
+
+Strings "abcd" and "bd" are strictly smaller than "aa".
+
+
+Assume that:
+
+1 ≤ N, M ≤ 10000
+
+1 ≤ length of any string contained by A or B ≤ 10
+
+All the input strings comprise only lowercase English alphabet letters (a-z)
+
+
+In your solution, focus on correctness. The performance of your solution will not be the primary focus of the assessment.

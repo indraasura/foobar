@@ -1,0 +1,2 @@
+abcd,aabc,bd aaa,aa
+OUTPUT: 3,2
